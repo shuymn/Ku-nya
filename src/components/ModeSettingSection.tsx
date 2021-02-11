@@ -1,10 +1,10 @@
 import { h, Component } from 'preact'
-import SettingSection from './SettingSection'
+import SettingSection from '../components/SettingSection'
 import { Modes } from '../lib/options'
 
 interface Props {
   initialValue: Modes
-  update(mode: Modes)
+  update(mode: Modes): void
 }
 
 interface State {
@@ -28,14 +28,14 @@ export default class ModeSettingSection extends Component<Props, State> {
     }
   }
 
-  handleModeChange = (ev: Event) => {
+  handleModeChange = (ev: Event): void => {
     const { update } = this.props
     const value = (ev.target as HTMLSelectElement).value as Modes
     this.setState({ value })
     update(value)
   }
 
-  render() {
+  render(): h.JSX.Element {
     const {
       handleModeChange,
       state: { value },
@@ -43,7 +43,7 @@ export default class ModeSettingSection extends Component<Props, State> {
 
     return (
       <SettingSection title="Ranking Mode">
-        <label for="content-selector">Ranking mode:</label>
+        <label htmlFor="content-selector">Ranking mode:</label>
         <select id="content-selector" value={value} onChange={handleModeChange}>
           {this.selectableOptions.map(selectable => (
             <option key={selectable} value={selectable}>

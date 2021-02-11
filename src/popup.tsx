@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
       smallestIncludableAspectRatio: res.data.smallestIncludableAspectRatio,
       isSafe: res.data.isSafe,
     }
-    render(
-      <SettingPanel initialOptions={options} />,
-      document.getElementById('setting'),
-    )
+    const setting = document.getElementById('setting')
+    if (setting) {
+      render(<SettingPanel initialOptions={options} />, setting)
+    }
   })
 })

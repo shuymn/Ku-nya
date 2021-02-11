@@ -2,7 +2,7 @@ import { h, render } from 'preact'
 import App from './components/App'
 import './lib/requestModifier'
 
-document.addEventListener('DOMContentLoaded', async event => {
+document.addEventListener('DOMContentLoaded', async () => {
   chrome.runtime.sendMessage({ method: 'getOptions' }, res => {
     const options = {
       mode: res.data.mode,
@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', async event => {
       smallestIncludableAspectRatio: res.data.smallestIncludableAspectRatio,
       isSafe: res.data.isSafe,
     }
-    render(<App options={options} />, document.getElementById('gallery'))
+    const gallery = document.getElementById('gallery')
+    if (gallery) {
+      render(<App options={options} />, gallery)
+    }
   })
 })

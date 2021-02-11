@@ -1,6 +1,6 @@
 import { h, Component, FunctionalComponent } from 'preact'
-import SettingSection from './SettingSection'
-import TagInput from './TagInput'
+import SettingSection from '../components/SettingSection'
+import TagInput from '../components/TagInput'
 
 interface Props {
   initialTags: string[]
@@ -12,7 +12,7 @@ interface State {
 }
 
 export default class TagSettingSection extends Component<Props, State> {
-  handleTagAdd = (value: string) => {
+  handleTagAdd = (value: string): void => {
     const {
       props: { update },
       state: { tags },
@@ -25,7 +25,7 @@ export default class TagSettingSection extends Component<Props, State> {
     update(newtags)
   }
 
-  handleTagDelete = (name: string) => {
+  handleTagDelete = (name: string): void => {
     const { update } = this.props
     const tags = this.state.tags.filter(tag => tag !== name)
 
@@ -40,7 +40,7 @@ export default class TagSettingSection extends Component<Props, State> {
     }
   }
 
-  render() {
+  render(): h.JSX.Element {
     const {
       handleTagAdd,
       handleTagDelete,

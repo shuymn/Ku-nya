@@ -16,12 +16,12 @@ export default class TagInput extends Component<Props, State> {
     this.state = { value: '' }
   }
 
-  handleChange = (ev: Event) => {
+  handleChange = (ev: Event): void => {
     const target = ev.target as HTMLInputElement
     this.setState({ value: target.value })
   }
 
-  handleAddClick = () => {
+  handleAddClick = (): void => {
     const {
       props: { add },
       state: { value },
@@ -30,7 +30,7 @@ export default class TagInput extends Component<Props, State> {
     this.setState({ value: '' })
   }
 
-  render() {
+  render(): h.JSX.Element {
     const {
       props: { label, placeholder },
       state: { value },

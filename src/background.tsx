@@ -1,7 +1,7 @@
-import * as storageUtil from './lib/StorageUtil'
 import { getOptions } from './lib/options'
+import * as storageUtil from './lib/StorageUtil'
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   switch (request.method) {
     case 'getOptions':
       sendResponse({ data: getOptions() })
