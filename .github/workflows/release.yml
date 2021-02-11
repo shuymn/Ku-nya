@@ -20,7 +20,7 @@ jobs:
         working-directory: ./release
         run: |
           VERSION=$(cat manifest.json | grep -w version | cut -d ' ' -f 4 | tr -d ',' | tr -d '"')
-          echo "MANIFEST_VERSION=${VERSION}" >> $GITHUB_ENV
+          echo "MANIFEST_VERSION=v${VERSION}" >> $GITHUB_ENV
       - name: Push next release tag
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         run: |
