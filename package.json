@@ -2,7 +2,10 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
-    "update": "yarn upgrade-interactive --latest"
+    "update": "yarn upgrade-interactive --latest",
+    "typecheck": "tsc -p . --noEmit",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
   },
   "dependencies": {
     "@sentry/browser": "6.1.0",
