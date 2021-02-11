@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
-    "noUnusedLocals": true,
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es2015", "es2016"],
+    "target": "ES2019",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
     "jsx": "react",
     "jsxFactory": "h"
-  }
+  },
+  "include": ["env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "release"]
 }

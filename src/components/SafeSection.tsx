@@ -1,5 +1,5 @@
 import { h, Component } from 'preact'
-import SettingSection from './SettingSection'
+import SettingSection from '../components/SettingSection'
 
 interface Props {
   initial_is_safe: boolean
@@ -20,7 +20,7 @@ export default class SafeSection extends Component<Props, State> {
     }
   }
 
-  handleCheckboxClick = (ev: Event) => {
+  handleCheckboxClick = (ev: Event): void => {
     const {
       props: { update },
     } = this
@@ -31,7 +31,7 @@ export default class SafeSection extends Component<Props, State> {
     update(target.checked)
   }
 
-  render() {
+  render(): h.JSX.Element {
     return (
       <SettingSection title="[beta] Safe Setting(only apply to daily ranking)">
         <input

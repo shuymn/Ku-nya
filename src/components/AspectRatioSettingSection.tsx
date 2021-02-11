@@ -1,5 +1,5 @@
 import { h, Component } from 'preact'
-import SettingSection from './SettingSection'
+import SettingSection from '../components/SettingSection'
 
 interface Props {
   initial_smallest_includable_aspect_ratio: number
@@ -25,7 +25,7 @@ export default class AspectRatioSettingSection extends Component<Props, State> {
     }
   }
 
-  handleCheckboxClick = (ev: Event) => {
+  handleCheckboxClick = (ev: Event): void => {
     const {
       state: { smallest_includable_aspect_ratio },
       props: { update },
@@ -37,7 +37,7 @@ export default class AspectRatioSettingSection extends Component<Props, State> {
     update(target.checked, smallest_includable_aspect_ratio)
   }
 
-  handleNumberChange = (ev: Event) => {
+  handleNumberChange = (ev: Event): void => {
     const {
       state: { is_excluding_high_aspect_ratio },
       props: { update },
@@ -50,7 +50,7 @@ export default class AspectRatioSettingSection extends Component<Props, State> {
     update(is_excluding_high_aspect_ratio, value)
   }
 
-  render() {
+  render(): h.JSX.Element {
     const {
       aspectRatioSettingsId,
       handleCheckboxClick,

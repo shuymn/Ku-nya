@@ -6,15 +6,19 @@ export default class Illust extends Component<{
   isReady: boolean
   onload(): void
 }> {
-  render() {
+  render(): h.JSX.Element {
     const { illust, isReady, onload } = this.props
     return (
-      <a target="_blank" href={`https://www.pixiv.net/i/${illust.id}`}>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={`https://www.pixiv.net/i/${illust.id}`}
+      >
         <img
-          className={isReady && 'loaded'}
+          className={isReady ? 'loaded' : undefined}
           alt={`${illust.authorName} / ${illust.title}`}
           src={illust.imageUrl}
-          ref={(img: HTMLImageElement) => {
+          ref={(img: HTMLImageElement | null) => {
             img && (img.onload = img.onerror = onload)
           }}
         />

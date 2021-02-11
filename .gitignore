@@ -1,4 +1,10 @@
 node_modules/
-release/dist/
+release/
+!release/icon
+!release/main.css
+!release/manifest.json
+!release/newTab.html
+!release/popup.css
+!release/popup.html
 .DS_Store
 yarn-error.log
