@@ -10,7 +10,7 @@
   "dependencies": {
     "@sentry/browser": "6.3.0",
     "axios": "0.21.1",
-    "preact": "^10.5.12"
+    "preact": "^10.5.13"
   },
   "devDependencies": {
     "@types/axios": "0.14.0",
