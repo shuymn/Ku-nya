@@ -21,7 +21,7 @@ export function getValue<T extends string>(
 }
 
 export function getJSON<
-  T extends Record<string, unknown> | Record<string, unknown>[]
+  T extends Record<string, unknown> | Record<string, unknown>[],
 >(key: string, defaultValue: T = {} as T): T {
   if (!window.localStorage) return defaultValue
 
