@@ -1,4 +1,4 @@
-import { h, Component } from 'preact'
+import { Component, h } from 'preact'
 import SettingSection from '../components/SettingSection'
 
 interface Props {
@@ -74,6 +74,7 @@ export default class AspectRatioSettingSection extends Component<Props, State> {
           children: [
             'Excluding images with over ',
             <input
+              key="ratio"
               type="number"
               style="width: 3em;"
               value={smallest_includable_aspect_ratio}
