@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@types/axios": "0.14.0",
-    "@types/cheerio": "0.22.29",
+    "@types/cheerio": "0.22.30",
     "@types/chrome": "^0.0.145",
     "@types/webpack": "5.28.0",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
