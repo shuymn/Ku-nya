@@ -8,7 +8,7 @@
     "fix": "eslint . --fix"
   },
   "dependencies": {
-    "@sentry/browser": "6.8.0",
+    "@sentry/browser": "6.9.0",
     "axios": "0.21.1",
     "preact": "^10.5.14"
   },
