@@ -8,7 +8,7 @@
     "fix": "eslint . --fix"
   },
   "dependencies": {
-    "@sentry/browser": "6.13.3",
+    "@sentry/browser": "6.14.0",
     "axios": "0.24.0",
     "preact": "^10.5.15"
   },
@@ -17,11 +17,11 @@
     "@types/cheerio": "0.22.30",
     "@types/chrome": "^0.0.162",
     "@types/webpack": "5.28.0",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "eslint": "^7.32.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "eslint": "^8.1.0",
     "eslint-config-preact": "^1.2.0",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",
@@ -30,5 +30,8 @@
     "typescript": "4.4.4",
     "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1"
+  },
+  "volta": {
+    "node": "16.13.0"
   }
 }
