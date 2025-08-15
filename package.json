@@ -23,7 +23,7 @@
     "eslint-config-preact": "^1.5.0",
     "eslint-config-prettier": "^8.10.2",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^4.2.5",
     "prettier": "^2.7.1",
     "ts-loader": "9.5.2",
     "ts-node": "10.9.2",
