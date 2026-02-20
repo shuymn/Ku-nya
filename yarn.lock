@@ -478,10 +478,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/chrome@^0.0.308":
-  version "0.0.308"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.308.tgz#468a7ad2895bb6c95904539bab6f7b6a7507010b"
-  integrity sha512-H5VF01xhUQHwNy8Hfu4khwHJncyckw7IEricOqrIBan8gsDXnBu5A3qJ15him8Kx+YY6lNkrXZGJajEUSGRsRQ==
+"@types/chrome@^0.1.37":
+  version "0.1.37"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.1.37.tgz#c02e80f923011d27a728c17da9c9f3154764c16d"
+  integrity sha512-IJE4ceuDO7lrEuua7Pow47zwNcI8E6qqkowRP7aFPaZ0lrjxh6y836OPqqkIZeTX64FTogbw+4RNH0+QrweCTQ==
   dependencies:
     "@types/filesystem" "*"
     "@types/har-format" "*"
