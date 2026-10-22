@@ -35,7 +35,7 @@ jobs:
       - uses: actions/setup-node@v3
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         with:
-          node-version: "15"
+          node-version: "22.23.4"
 
       - name: Install dependencies
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
